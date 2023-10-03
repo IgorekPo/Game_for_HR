@@ -1,0 +1,213 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+body {
+    line-height: 1;  
+    max-height: 100%; 
+    min-width: 320px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+[class*=__conteiner]{
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+
+/* ---------------------------------------------------------- */
+.header__conteiner {
+    height: 150px;
+    display: flex;
+}
+.header__menu {
+    display: flex;
+    right: -40%;
+    position: relative;
+}
+.header__hearts{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+}
+
+.header__heart {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(45deg); 
+}
+
+.header__heart::before , .header__heart::after {
+    content : '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+.header__heart::before {
+    top: -25px;
+    left: 0;
+}
+.header__heart::after {
+    top: 0;
+    left: -25px;
+}
+
+/* Animation HEART */
+.header-heart1,
+.header-heart1::before,
+.header-heart1::after{
+    content: '';
+
+}
+.header-heart2,
+.header-heart2::before,
+.header-heart2::after{
+    content: '';
+}
+.header-heart3,
+.header-heart3::before,
+.header-heart3::after{
+    content: '';
+}
+.header-heart4,
+.header-heart4::before,
+.header-heart4::after{
+    content: ''; 
+}
+.header-heart5,
+.header-heart5::before,
+.header-heart5::after{
+    content: '';
+    background-color: rgb(107, 107, 107); 
+}
+
+/* ---------------------------------------------------------------- */
+.main__conteiner {
+    height: 400px;
+    flex: 1 1 auto;
+    position: relative;
+    flex-direction: row;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+}
+.main__boys {
+    display: flex;
+}
+.main__boy-move {
+    position: relative;
+}
+.main__game {
+    
+}
+
+.boy__move{
+position: absolute;
+}
+.move__boy-first{
+    display: block;
+}
+
+.move__boy-second{
+    display: none;
+}
+.move-img1{
+
+}
+.move-img2{
+    
+}
+.move-img3{
+    
+}
+.move-img4{
+    
+}
+/* ----------------------------------------------------------------- */
+
+/* Animation TEXT -------------------------------------------------------*/
+
+.main__boy-text {
+    width: 250px; 
+    height: 100px; 
+    margin-left: 26px;
+    background: #B5DDD4;
+    position: absolute;
+    border-radius: 10px;
+    padding: 10px;
+    top: -20px;
+    left: 220px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.main__boy-text::before {
+    content: "";
+    width: 0; 
+    height: 0;
+    position: absolute; 
+    right: 100%; 
+    top: calc(50% - 12px);
+    border-top: 47px solid transparent;
+    border-right: 80px solid #B5DDD4;
+    border-bottom: 0px solid transparent;
+}
+
+/* ------------------------------------------------------------------- */
+.name{
+    color: red;
+}
+
+.footer__conteiner {
+    height: 150px;
+    display: flex;
+}
+.footer__menu{
+    display: flex;
+    right: -40%;
+    position: relative;
+}
+.footer__codes{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+.footer__number{
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    border: 2px solid black; 
+}
+/* Animation NUMBER */
+.footer-number1, .footer-number2, .footer-number3, .footer-number4, .footer-number5{
+    background-color: black;
+}
+/* ---------------------------------------------------------- */
