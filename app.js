@@ -8,7 +8,7 @@ let yourName = prompt ('Привет! Как тебя зовут?');
 
 
 function showName() {
-    boyText.innerHTML = `Привет  ${yourName} !!`
+    boyText.innerHTML = `Привет,  ${yourName} !!`
 };
 setTimeout (showName, 500);
 
