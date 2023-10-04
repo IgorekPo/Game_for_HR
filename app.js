@@ -1,11 +1,7 @@
 //  ---------------------BOY TEXT-----------------------------------
 
-
 const boyText = document.querySelector ('.main__boy-text');
-
-
 let yourName = prompt ('Привет! Как тебя зовут?');
-
 
 function showName() {
     boyText.innerHTML = `Привет,  ${yourName} !!`
@@ -30,7 +26,7 @@ function showName3() {
 
 setTimeout (showName4, 11000);
 function showName4() {
-    boyText.innerHTML = (`Помести круг в круг`)
+    boyText.innerHTML = (`Помести круг в круг`); 
 };
 
 
@@ -149,27 +145,64 @@ gragItem.addEventListener("mousedown", function (event) {
 
 		if (!elemBelow) return;
 		let droppableBelow = elemBelow.closest('.main__gates');
+        let openNumber = document.querySelector ('.footer__codes');
+                        // footer code        
 
 		if (currentDroppable !== droppableBelow) {
 			if (currentDroppable) {
 				currentDroppable.classList.remove('_active');
 				gragItem.classList.remove('_active');
+                        // footer code
+                currentDroppable.classList.remove('main-number');
+                openNumber.classList.remove('main-number');
 			}
+            
 			currentDroppable = droppableBelow;
 			if (currentDroppable) {
 				currentDroppable.classList.add('_active');
 				gragItem.classList.add('_active');
-			}
+                        // footer code
+                currentDroppable.classList.add('main-number');
+                openNumber.classList.add('main-number');
+                
+                
+
+  
+            }
+            let oneNumber = document.querySelector('.footer-number1');
+                oneNumber.style.background = 'none';
+                oneNumber.innerHTML = 9;
+            let twoNumber = document.querySelector('.footer-number2');
+                twoNumber.style.background = 'none';
+                twoNumber.innerHTML = 7;
+            let threeNumber = document.querySelector('.footer-number3');
+                threeNumber.style.background = 'none';
+                threeNumber.innerHTML = 5;
+            let foreNumber = document.querySelector('.footer-number4');
+                foreNumber.style.background = 'none';
+                foreNumber.innerHTML = 1;
+            let fiveNumber = document.querySelector('.footer-number5');
+                fiveNumber.style.background = 'none';
+                fiveNumber.innerHTML = 9;
+            const boyText = document.querySelector ('.main__boy-text');
+                function showName() {
+                    boyText.innerHTML = `Молодец!!`
+                };
+                setTimeout (showName, 1000);
 		}
+
+
 	}
+
 	document.addEventListener('mousemove', onDragItem);
 
-	document.addEventListener("mouseup", function (event) {
+	document.addEventListener("mouseup", function () {
 		document.removeEventListener('mousemove', onDragItem);
-	}, { "once": true });
+	}, { "once": false });
 });
 gragItem.addEventListener("dragstart", function (event) {
 	event.preventDefault();
 });
 
 //  -------------------------------------------------------------------
+

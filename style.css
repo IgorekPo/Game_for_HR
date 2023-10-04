@@ -212,6 +212,12 @@ position: absolute;
     position: relative;
     text-align: center;
 }
+
+/* .footer__codes.main-number{
+    background: aqua;
+} */
+
+
 .footer__number{
     width: 50px;
     height: 50px;
