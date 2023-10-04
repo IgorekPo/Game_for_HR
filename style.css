@@ -35,7 +35,7 @@ li {
 }
 
 
-/* ---------------------------------------------------------- */
+/* -------------------------HEART--------------------------------- */
 .header__conteiner {
     height: 150px;
     display: flex;
@@ -104,10 +104,10 @@ li {
 .header-heart5::before,
 .header-heart5::after{
     content: '';
-    background-color: rgb(107, 107, 107); 
+    /* background-color: rgb(107, 107, 107);  */
 }
 
-/* ---------------------------------------------------------------- */
+/* -------------------------------BOY and FIELD--------------------------------- */
 .main__conteiner {
     height: 400px;
     flex: 1 1 auto;
@@ -128,21 +128,28 @@ li {
     width: 500px;
     height: 300px;
     background-color: greenyellow;
-    border: 2px solid black;
-    border-radius: 20%;
 }
 .main__ball{
     border-radius: 50%;
-    position: absolute;
     width: 70px;
     height: 70px;
     background-color: rgb(226, 77, 22);
+    cursor: grab;
 }
 
 .main__gates{
-    
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: green;
+	left: 80%;
+	top: 50%;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
 }
-
+.main__gates._active{
+    box-shadow: inset 0px 0px 10px 5px #333f2d;
+}
 .boy__move{
 position: absolute;
 }
@@ -153,18 +160,7 @@ position: absolute;
 .move__boy-second{
     display: none;
 }
-.move-img1{
 
-}
-.move-img2{
-    
-}
-.move-img3{
-    
-}
-.move-img4{
-    
-}
 /* ----------------------------------------------------------------- */
 
 /* Animation TEXT -------------------------------------------------------*/
@@ -195,9 +191,9 @@ position: absolute;
 }
 
 /* ------------------------------------------------------------------- */
-.name{
-    color: red;
-}
+
+/* ---------------------------CODE---------------------------------------- */
+
 
 .footer__conteiner {
     height: 150px;
