@@ -4,7 +4,8 @@ const boyText = document.querySelector ('.main__boy-text');
 let yourName = prompt ('Привіт! Як тебе звати?');
 
 function showName() {
-    boyText.innerHTML = `Привіт,  ${yourName} !!`
+    boyText.innerHTML = `Привіт,  ${yourName} !!`;
+	
 };
 setTimeout (showName, 500);
 
@@ -65,9 +66,11 @@ function boyMoveSecond(){
     }
 };
 boyMoveSecond();
+
+
 //  -------------------------------------------------------------------
 
-//  -----------------------------Field--------------------------------------
+//  ---------------------------X and Y----------------------------------------
 
 // let mainField = document.querySelector ('.main__field');
 
@@ -76,6 +79,8 @@ boyMoveSecond();
 //     `ClientX - ${event.clientX} <br> ClientY - ${event.clientY}`;
 // } );
 
+
+// -------------------------------Field------------------------------------------------------------------
 
 const gragField = document.querySelector('.main__field');
 const gragItem = document.querySelector('.main__ball');
@@ -97,7 +102,7 @@ gragItem.addEventListener("mousedown", function (event) {
 	}
 
 	gragItem.style.position = 'absolute';
-	gragItem.style.zIndex = 1000;
+	gragItem.style.zIndex = 3;
 	document.body.append(gragItem);
 
 	moveItem(event.pageX, event.pageY);
@@ -164,11 +169,8 @@ gragItem.addEventListener("mousedown", function (event) {
                         // footer code
                 currentDroppable.classList.add('main-number');
                 openNumber.classList.add('main-number');
-                
-                
-
-  
             }
+
             let oneNumber = document.querySelector('.footer-number1');
                 oneNumber.style.background = 'none';
                 oneNumber.innerHTML = 9;
@@ -185,15 +187,18 @@ gragItem.addEventListener("mousedown", function (event) {
                 fiveNumber.style.background = 'none';
                 fiveNumber.innerHTML = 9;
             const boyText = document.querySelector ('.main__boy-text');
+				setTimeout (showName, 1000);
                 function showName() {
-                    boyText.innerHTML = `Молодець!! Тепер в тебе є код до сейфу !`
+                    boyText.innerHTML = `Молодець!! Тепер в тебе є код до сейфу !`;
+					
+					function showName() {
+						boyText.innerHTML = `ОБОВ\`ЯЗКОВО! запам\`ятай цей код, та тисни далі щоб відкрити сейф `;
+					};
+					setTimeout (showName, 2500);
                 };
-                setTimeout (showName, 1000);
-            let openLevel = document.querySelector ('next-level');
-                openLevel.style.display = 'block';
+				let nextLevel = document.querySelector ('.next-level')
+				nextLevel.classList.add ('push-to-next-level');
 		}
-
-
 	}
 
 	document.addEventListener('mousemove', onDragItem);
@@ -208,8 +213,19 @@ gragItem.addEventListener("dragstart", function (event) {
 
 //  -------------------------------------------------------------------
 
+
+//  -----------------------------NEXT LEVEL--------------------------------------
+
 let p = 1;
 document.querySelector ('button').onclick = function (e){
+	let nextGame = document.querySelector ('.second__game')
     p++;
     document.querySelector ('progress').value = p;
+	if (p == 10){
+		boyMove();
+		boyMoveSecond();
+		nextGame.classList.add ('second__game-block');
+	}
 }
+
+//  -------------------------------------------------------------------
