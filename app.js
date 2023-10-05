@@ -26,7 +26,7 @@ function showName3() {
 
 setTimeout (showName4, 11000);
 function showName4() {
-    boyText.innerHTML = (`Помісти червону кулю у зеоену кулю`); 
+    boyText.innerHTML = (`Помісти червону кулю у зелену кулю`); 
 };
 
 
