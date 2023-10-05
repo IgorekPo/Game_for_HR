@@ -189,6 +189,8 @@ gragItem.addEventListener("mousedown", function (event) {
                     boyText.innerHTML = `Молодец!!`
                 };
                 setTimeout (showName, 1000);
+            let openLevel = document.querySelector ('next-level');
+                openLevel.style.display = 'block';
 		}
 
 
@@ -206,3 +208,8 @@ gragItem.addEventListener("dragstart", function (event) {
 
 //  -------------------------------------------------------------------
 
+let p = 1;
+document.querySelector ('button').onclick = function (e){
+    p++;
+    document.querySelector ('progress').value = p;
+}
