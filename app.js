@@ -1,32 +1,32 @@
 //  ---------------------BOY TEXT-----------------------------------
 
 const boyText = document.querySelector ('.main__boy-text');
-let yourName = prompt ('Привет! Как тебя зовут?');
+let yourName = prompt ('Привіт! Як тебе звати?');
 
 function showName() {
-    boyText.innerHTML = `Привет,  ${yourName} !!`
+    boyText.innerHTML = `Привіт,  ${yourName} !!`
 };
 setTimeout (showName, 500);
 
 setTimeout (showName1, 1900);
 
 function showName1() {
-    boyText.innerHTML = (`Меня зовут Ку-Ку.`)
+    boyText.innerHTML = (`Мене звати Ку-Ку.`)
 };
 
 setTimeout (showName2, 5500);
 function showName2() {
-    boyText.innerHTML = (`Давай поиграем`)
+    boyText.innerHTML = (`Давай пограємо!`)
 };
 
 setTimeout (showName3, 8500);
 function showName3() {
-    boyText.innerHTML = (`Эта игра для тебя`)
+    boyText.innerHTML = (`Це не дуже складна гра`)
 };
 
 setTimeout (showName4, 11000);
 function showName4() {
-    boyText.innerHTML = (`Помести круг в круг`); 
+    boyText.innerHTML = (`Помісти червону кулю у зеоену кулю`); 
 };
 
 
@@ -186,7 +186,7 @@ gragItem.addEventListener("mousedown", function (event) {
                 fiveNumber.innerHTML = 9;
             const boyText = document.querySelector ('.main__boy-text');
                 function showName() {
-                    boyText.innerHTML = `Молодец!!`
+                    boyText.innerHTML = `Молодець!! Тепер в тебе є код до сейфу !`
                 };
                 setTimeout (showName, 1000);
             let openLevel = document.querySelector ('next-level');
