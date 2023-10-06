@@ -211,7 +211,7 @@ gragItem.addEventListener("dragstart", function (event) {
 	event.preventDefault();
 });
 
-//  -------------------------------------------------------------------
+//  -----------------------------------------------------------------------------
 
 
 //  -----------------------------NEXT LEVEL--------------------------------------
@@ -222,10 +222,46 @@ document.querySelector ('button').onclick = function (e){
     p++;
     document.querySelector ('progress').value = p;
 	if (p == 10){
-		boyMove();
-		boyMoveSecond();
 		nextGame.classList.add ('second__game-block');
+		function showName() {
+			boyText.innerHTML = `А ось і СЕЙФ! Нужбо, вводь код!`;
+			boyMove();
+			boyMoveSecond();
+		};
+		setTimeout (showName, 9000);
+
+		let nextLevel = document.querySelector ('.next-level')
+		nextLevel.classList.add ('push-to-next-level');
+
+		let boyNewGame = document.querySelector ('.main__boys');
+		boyNewGame.classList.add ('boy__second-game');
 	}
 }
 
-//  -------------------------------------------------------------------
+//  -----------------------------------------------------------------------------
+
+
+//  --------------------------SAFE NUMBERS ANIMATION-------------------------------
+let blockForNumber = document.querySelector ('.safe__numbers');
+
+blockForNumber.addEventListener('mouseover', function (event){
+    let target = event.target.closest('span');
+    if(!target) return;
+    target.style.cssText = `background-color: red;`;
+
+})
+
+blockForNumber.addEventListener('mouseout', function (event){
+    let target = event.target.closest('span');
+    if(!target) return;
+    target.style.cssText = ``;
+    
+})
+//  -----------------------------------------------------------------------------
+
+//  --------------------------SAFE NUMBERS FUNCTIONS------------------------------
+
+
+
+//  -----------------------------------------------------------------------------
+

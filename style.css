@@ -119,6 +119,7 @@ li {
 }
 .main__boys {
     display: flex;
+    z-index: 5;
 }
 .main__boy-move {
     position: relative;
@@ -228,7 +229,7 @@ position: absolute;
     background-color: black;
 }
 /* ---------------------------------------------------------- */
-/* -------------------------NEX LEVEL--------------------------------- */
+/* -------------------------TO NEX LEVEL--------------------------------- */
 
 .next-level {
     position: absolute;
@@ -244,18 +245,18 @@ position: absolute;
     transform: translate(-50%, -50%);
 }
 
-button {
+.go__next-level {
     background: linear-gradient(136deg, #a2edf9 18.06%, #0006a7 98.16%);
     border-radius: 40%;
     cursor:pointer;
     padding: 15px 40px;
     margin-top: 70px;
-    animation: pushlexel 1s;
+    animation: pushlexel 2s;
 }
 progress{
     border-radius: 20%;
     text-align: center;
-    animation: pushlexel 1s;
+    animation: pushlexel 2s;
 }
 @keyframes pushlexel {
     0%,99.99% {opacity: 0;}
@@ -265,7 +266,7 @@ progress{
 
 .push-to-next-level{
     display: block;
-    animation: nextlevel 1s;
+    animation: nextlevel 2s;
 }
 
 @keyframes nextlevel{
@@ -281,6 +282,8 @@ progress{
 
 /* ---------------------------------------------------------- */
 
+/* --------------------------NEXT GAME-------------------------------- */
+
 .second__game-block{
     width: 100%;
     height: 100%;
@@ -294,6 +297,9 @@ progress{
     top: 50%;
     transform: translate(-50%, -50%);
 }
+/* .second__game{
+
+} */
 
 @keyframes nextgame{
     0%,80% {border-radius: 50%;}
@@ -305,9 +311,9 @@ progress{
 
 .safe__block{
     background-color: white;
-    width: 800px;
+    width: 1000px;
     height: 500px;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -316,5 +322,114 @@ progress{
 
 @keyframes safeBlock {
     0% {width: 0px; height: 0px;}
-    100% {width: 800px; height: 500px;}
+    100% {width: 1000px; height: 500px;}
 }
+
+
+.boy__second-game {
+    animation: boySecondGame 14.5s; 
+}
+
+@keyframes boySecondGame {
+    0%, 50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/* ---------------------------------------------------------- */
+
+/* -------------------------SAFE--------------------------------- */
+
+.main__safe{
+    position: absolute;
+    margin: 10px 0 0 255px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: mainsafe 10s;
+}
+@keyframes mainsafe {
+    0% {left: 0;}
+    100% {left: 50%;}
+}
+
+/* --------------------------------------- */
+.main__safe img{
+max-height: 450px;
+animation: imgsafe 10s;
+
+
+}
+@keyframes imgsafe {
+    0%,50% {opacity: 0;}
+    0% { height: 0px;}
+    100% { height: 450px;}
+}
+
+.safe-open {
+    position: fixed;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background: #fa0505;
+    cursor:pointer;
+    animation: buttonsafe 10s;
+    left: 664px;
+    top: 222px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+@keyframes buttonsafe {
+    0%,99% {opacity: 0;}
+    0%,50%{left: 674px;}
+}
+
+
+.safe__numbers{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 3px;
+    left: 789px;
+    top: 215px;
+    position: absolute;
+    background-color: black;
+    animation: safeNumbers 10s;
+}
+@keyframes safeNumbers {
+    0%,99% {opacity: 0;}
+    0%,50%{left: 779px;}
+    0%,50%{top: 205px;}
+}
+.safe__number{
+    color: white;
+    padding: 12px 17px;
+    cursor:pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.display__numbers{
+    background: linear-gradient(136deg, #fcd2d2 18.06%, #a70000 98.16%);
+    display: grid;
+    grid-template-columns: repeat(5, 0fr);
+    gap: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    left: 795px;
+    top: 169px;
+    position: absolute;
+    height: 27px;
+    animation: displayNumbers 10s;
+    border-radius: 10%;
+}
+@keyframes displayNumbers {
+    0%,99% {opacity: 0;}
+    0%,55%{left: 795px;}
+    0%,55%{top: 169px;}
+}
+
+.display__number{
+}
+/* ---------------------------------------------------------- */
