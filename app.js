@@ -259,9 +259,46 @@ blockForNumber.addEventListener('mouseout', function (event){
 })
 //  -----------------------------------------------------------------------------
 
-//  --------------------------SAFE NUMBERS FUNCTIONS------------------------------
+//  --------------------------SAFE NUMBERS FUNCTIONS + SAFE DISPLAY------------------------------
 
+let display = document.querySelector ('.display__numbers');
+let numbers = Array.from(document.querySelectorAll('.safe__number'));
+let openSafe = document.querySelector ('.safe-open');
+
+numbers.map((num) => {
+    num.addEventListener ('click', (e) =>{  
+        switch (e.target.innerText){
+            default:
+            if(display.innerText.length < 5){ 
+                display.innerText += e.target.innerText;
+                let arr = display.innerText.split ('');
+                
+                console.log (arr);
+                
+                if (arr.length === 5){                 
+                    let arr = display.innerText.split (' ');
+                    if (+arr === 97519){
+                        openSafe.addEventListener('click', () => {
+                            showName()
+                                boyText.innerHTML = `${yourName} я вас ВІТАЮ  !!!!!!`;
+                                boyMove();
+                                boyMoveSecond();
+                            let winLetter = document.querySelector ('.win__latter');
+                                winLetter.classList.add ('win__letter-animation');
+                        })
+                    } else if (+arr !== 97519){
+                        openSafe.addEventListener('click', () => {
+                            showName()
+                                boyText.innerHTML = `${yourName} код не вірний. Спробуй ще раз`;
+                             display.innerText = '';
+                        })
+                    }
+                }
+            }
+        }
+    }); 
+
+})
 
 
 //  -----------------------------------------------------------------------------
-
