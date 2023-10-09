@@ -45,9 +45,6 @@ li {
     right: -255px;
     position: relative;
 }
-
-
-
 /* -------------------------------BOY and FIELD--------------------------------- */
 .main__conteiner {
     height: 400px;
@@ -78,7 +75,6 @@ li {
     background: linear-gradient(136deg, #ffd7c4 18.06%, #fa0505 98.16%);
     cursor: grab;
 }
-
 .main__gates{
     position: absolute;
     width: 80px;
@@ -98,15 +94,10 @@ position: absolute;
 .move__boy-first{
     display: block;
 }
-
 .move__boy-second{
     display: none;
 }
-
-/* ----------------------------------------------------------------- */
-
 /* Animation TEXT -------------------------------------------------------*/
-
 .main__boy-text {
     width: 250px; 
     height: 100px; 
@@ -131,11 +122,7 @@ position: absolute;
     border-right: 80px solid #B5DDD4;
     border-bottom: 0px solid transparent;
 }
-
-/* ------------------------------------------------------------------- */
-
 /* ---------------------------CODE---------------------------------------- */
-
 .footer__conteiner {
     height: 150px;
     display: flex;
@@ -153,9 +140,6 @@ position: absolute;
     position: relative;
     text-align: center;
 }
-
-
-
 .footer__number{
     width: 50px;
     height: 50px;
@@ -166,9 +150,7 @@ position: absolute;
 .footer-number1, .footer-number2, .footer-number3, .footer-number4, .footer-number5{
     background-color: black;
 }
-/* ---------------------------------------------------------- */
 /* -------------------------TO NEX LEVEL--------------------------------- */
-
 .next-level {
     position: absolute;
     width: 400px;
@@ -182,7 +164,6 @@ position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .go__next-level {
     background: linear-gradient(136deg, #a2edf9 18.06%, #0006a7 98.16%);
     border-radius: 40%;
@@ -200,13 +181,10 @@ progress{
     0%,99.99% {opacity: 0;}
     100% {opacity: 1;}
 }
-
-
 .push-to-next-level{
     display: block;
     animation: nextlevel 2s;
 }
-
 @keyframes nextlevel{
     0% {transform: translate(-50%, -50%);}
     100% {transform: translate(-50%, -50%);}
@@ -216,12 +194,7 @@ progress{
     0% {width: 0; height: 0;}
     100% {width: 400px; height: 200px;}
 }
-
-
-/* ---------------------------------------------------------- */
-
 /* --------------------------NEXT GAME-------------------------------- */
-
 .second__game-block{
     width: 100%;
     height: 100%;
@@ -235,18 +208,12 @@ progress{
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.second__game{
-
-}
-
 @keyframes nextgame{
     0%,80% {border-radius: 50%;}
     0% {width: 0px; height: 0px;}
     99% {width: 1800px; height: 1800px;}
     100% {width: 100%; height: 100%;}
 }
-
-
 .safe__block{
     z-index: 5;
     background-color: white;
@@ -258,28 +225,19 @@ progress{
     left: 50%;
     transform: translate(-50%, -50%);
     animation: safeBlock 10s;
-    /* 10s */
 }
-
 @keyframes safeBlock {
     0% {width: 0px; height: 0px;}
     100% {width: 1000px; height: 500px;}
 }
-
-
 .boy__second-game {
     animation: boySecondGame 14.5s; 
-    /* 14.5s */
 }
-
 @keyframes boySecondGame {
     0%, 50% {opacity: 0;}
     100% {opacity: 1;}
 }
-/* ---------------------------------------------------------- */
-
 /* -------------------------SAFE--------------------------------- */
-
 .main__safe{
     position: absolute;
     margin: 10px 0 0 255px;
@@ -288,26 +246,20 @@ progress{
     transform: translate(-50%, -50%);
     animation: mainsafe 10s;
     z-index: 15;
-    /* 10s */
 }
 @keyframes mainsafe {
     0% {left: 0;}
     100% {left: 50%;}
 }
-
-/* --------------------------------------- */
 .main__safe img{
 max-height: 450px;
 animation: imgsafe 10s;
-/* 10s */
-
 }
 @keyframes imgsafe {
     0%,50% {opacity: 0;}
     0% { height: 0px;}
     100% { height: 450px;}
 }
-
 .safe-open {
     position: fixed;
     width: 51px;
@@ -316,7 +268,6 @@ animation: imgsafe 10s;
     background: #fa0505;
     cursor:pointer;
     animation: buttonsafe 10s;
-    /* 10s */
     left: 664px;
     top: 222px;
     text-align: center;
@@ -330,8 +281,6 @@ animation: imgsafe 10s;
     0%,99% {opacity: 0;}
     0%,50%{left: 674px;}
 }
-
-
 .safe__numbers{
     display: grid;
     grid-template-columns: repeat(3, 0fr);
@@ -342,7 +291,6 @@ animation: imgsafe 10s;
     background-color: black;
     animation: safeNumbers 10s;
     z-index: 15;
-    /* 10s */
 }
 @keyframes safeNumbers {
     0%,99% {opacity: 0;}
@@ -357,7 +305,6 @@ animation: imgsafe 10s;
     font-weight: bold;
     text-align: center;
 }
-
 .display__numbers{
     background: linear-gradient(136deg, #fcd2d2 18.06%, #a70000 98.16%);
     display: grid;
@@ -369,25 +316,15 @@ animation: imgsafe 10s;
     position: absolute;
     height: 27px;
     animation: displayNumbers 10s;
-    /* 10s */
     border-radius: 10%;
-    z-index: 15;
-    
+    z-index: 15;   
 }
 @keyframes displayNumbers {
     0%,99% {opacity: 0;}
     0%,55%{left: 822px;}
     0%,55%{top: 169px;}
 }
-
-.display__number{
-}
-/* ---------------------------------------------------------- */
 /* --------------------------WIN LETTER-------------------------------- */
-
-.win__latter {
-}
-
 .win__letter-animation {
     display: block;
     width: 252px;
@@ -401,25 +338,20 @@ animation: imgsafe 10s;
     animation: letterAnime 5s;
     
 }
-
 @keyframes letterAnime {
     0% {left:538px};
     100% {left:277px };
 
 }
-
 .letter__text {
     padding: 10px 0 0 5px;
     color: black;
     font-size: 15px;
     font-weight: bold;
 }
-
 .letter__text h3{
 text-align: center;
 }
-
-
 .contact__number{
     font-style: normal;
     font-weight: bold;
@@ -427,7 +359,6 @@ text-align: center;
     line-height: 24px;
     color: black;
 }
-
 .my__contacts{
     width: 50px;
     height: 50px;
@@ -440,19 +371,15 @@ text-align: center;
     display: flex;
     align-items: center;
 }
-
 .contacts__inform{
     display: flex;
     gap: 20px;
     padding-left: 10px;
 }
-
 .inform-telegram {
     padding: 11px 0 0 106px;
 }
-
 /* ---------ANIMATION CONTACTS--------------------------------- */
-
 .animation__telegram{
 position: relative;
   text-align: center; 
@@ -464,7 +391,6 @@ position: relative;
   left: 111px;
   top: -48px;
 }
-
 .animation__telegram::before {
     content: '';
     position: absolute;
@@ -477,7 +403,6 @@ position: relative;
     border-radius: 50%;
     animation: pulse 2.5s linear infinite;
 }
-
 @keyframes pulse {
 0% {
     transform: scale(0.5);
@@ -491,7 +416,6 @@ position: relative;
     opacity: 0;
 }
 }
-
 .animation__telegram::after,
 .animation__telegram::before {
 content: '';
@@ -505,11 +429,9 @@ bottom: -20px;
 border-radius: 50%;
 animation: pulse 2.5s linear infinite;
 }
-
 .animation__telegram::after {
 animation-delay: 1.25s;
 }
-
 @keyframes pulse {
 0% {
     transform: scale(0.5);
@@ -523,14 +445,11 @@ animation-delay: 1.25s;
     opacity: 0;
 }
 }
-
 /* -------------------------vibration Phone----------------------- */
-
 .vibration-phone:hover{
     animation: shake 1s;
     animation-iteration-count: infinite;
 }
-
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
