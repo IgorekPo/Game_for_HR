@@ -46,69 +46,7 @@ li {
     position: relative;
 }
 
-/* -------------------------HEART--------------------------------- */
-/* .header__hearts{
-    display: flex;
-    flex-direction: row;
-    gap: 45px;
-    align-items: center;
-    position: relative;
-}
 
-.header__heart {
-    width: 20px;
-    height: 20px;
-    padding: 22px;
-    background-color: red;
-    transform: rotate(45deg); 
-}
-
-.header__heart::before , .header__heart::after {
-    content : '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 22px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
-}
-.header__heart::before {
-    top: -25px;
-    left: 0;
-}
-.header__heart::after {
-    top: 0;
-    left: -25px;
-}
-
-.header-heart1,
-.header-heart1::before,
-.header-heart1::after{
-    content: '';
-
-}
-.header-heart2,
-.header-heart2::before,
-.header-heart2::after{
-    content: '';
-}
-.header-heart3,
-.header-heart3::before,
-.header-heart3::after{
-    content: '';
-}
-.header-heart4,
-.header-heart4::before,
-.header-heart4::after{
-    content: ''; 
-}
-.header-heart5,
-.header-heart5::before,
-.header-heart5::after{
-    content: '';
-    background-color: rgb(107, 107, 107); 
-} */
 
 /* -------------------------------BOY and FIELD--------------------------------- */
 .main__conteiner {
