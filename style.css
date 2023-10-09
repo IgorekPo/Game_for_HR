@@ -47,7 +47,7 @@ li {
 }
 
 /* -------------------------HEART--------------------------------- */
-.header__hearts{
+/* .header__hearts{
     display: flex;
     flex-direction: row;
     gap: 45px;
@@ -82,7 +82,6 @@ li {
     left: -25px;
 }
 
-/* Animation HEART */
 .header-heart1,
 .header-heart1::before,
 .header-heart1::after{
@@ -108,8 +107,8 @@ li {
 .header-heart5::before,
 .header-heart5::after{
     content: '';
-    /* background-color: rgb(107, 107, 107);  */
-}
+    background-color: rgb(107, 107, 107); 
+} */
 
 /* -------------------------------BOY and FIELD--------------------------------- */
 .main__conteiner {
